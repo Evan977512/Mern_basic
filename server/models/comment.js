@@ -10,6 +10,10 @@ const CommentSchema = new mongoose.Schema({
     type: String,
     dafault: moment().format("DD.MON.YYYY hh:mm"),
   },
+  post: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: "post",
+  },
   creator: {
     type: mongoose.Schema.Types.ObjectId,
     ref: "user",
